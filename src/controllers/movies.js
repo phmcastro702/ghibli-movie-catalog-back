@@ -9,14 +9,16 @@ const MoviesController = {
         const requestedPage = req.params.page;
 
         try {
-            const retrievedMovies = await Movie.findAll({
+            const { count, rows } = await Movie.findAndCountAll({
                 limit: moviesPerPage,
                 offset: (requestedPage - 1) * moviesPerPage
             });
+            const moviesTotalPages = Math.ceil(count / moviesPerPage);
 
             res.status(200).send({
                 success: true,
-                data: retrievedMovies
+                data: rows,
+                totalPages: moviesTotalPages
             });
         } catch (err) {
             res.status(500).send({
