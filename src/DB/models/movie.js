@@ -25,7 +25,7 @@ Movie.init({
         }
     },
     description: {
-        type: DataTypes.STRING
+        type: DataTypes.TEXT
     },
     director: {
         type: DataTypes.STRING

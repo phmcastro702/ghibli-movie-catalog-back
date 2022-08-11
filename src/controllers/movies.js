@@ -6,7 +6,6 @@ const IMG_NOT_FOUND_URL = 'https://user-images.githubusercontent.com/24848110/33
 const MoviesController = {
     getPaginated: async (req, res) => {
         const moviesPerPage = 10;
-        console.log(req.params.page);
         const requestedPage = req.params.page;
 
         try {
@@ -25,15 +24,6 @@ const MoviesController = {
                 error: 'Não foi possível obter dados dos filmes'
             });
         }
-
-        // Fetch 10 instances/rows
-        // Project.findAll({ limit: 10 });
-
-        // Skip 8 instances/rows
-        // Project.findAll({ offset: 8 });
-
-        // Skip 5 instances and fetch the 5 after that
-        // Project.findAll({ offset: 5, limit: 5 });
 
     },
     refreshMovieList: async (_, res) => {
@@ -55,7 +45,6 @@ const MoviesController = {
                 });
             }
 
-            // TODO: corrigir sistema de update de filmes (quando atribui o novo objeto perde o metodo .save())
             const allMovies = await Movie.findAll();
             if (allMovies.length > 0) {
 
