@@ -32,12 +32,25 @@ Movie.init({
     },
     producer: {
         type: DataTypes.STRING
+    },
+    createdAt: {
+        type: DataTypes.STRING,
+        defaultValue: new Date()
+            .toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+            .replace(/\//gm, '-')
+    },
+    updatedAt: {
+        type: DataTypes.STRING,
+        defaultValue: new Date()
+            .toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+            .replace(/\//gm, '-')
     }
 }, {
     sequelize: DB_Connection,
-    modelName: 'Movie'
+    modelName: 'Movie',
+    timestamps: false,
 });
 
-
+// 10-08/2022 20:49:53
 
 export { Movie };
