@@ -6,7 +6,7 @@ Backend de suporte para website de visualização de catálogo de filmes do Stud
 
 ## Stack utilizada
 
-**Node, Express, Sequelize e MySQL**
+**Node, Express, Sequelize, MySQL e Heroku**
 
 
 ## Rodando localmente
