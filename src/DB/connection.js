@@ -18,6 +18,6 @@ const sequelize = new Sequelize(
 
 sequelize.sync()
     .then(() => console.log('DB Connected!'))
-    .catch(() => console.log('Failed DB connection'));
+    .catch((err) => console.log('Failed DB connection ' + err));
 
 export { sequelize as DB_Connection }
