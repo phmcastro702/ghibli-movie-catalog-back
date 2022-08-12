@@ -64,7 +64,7 @@ copiar este aquivo, renomeá-lo para .env e completar as variáveis
 
 
 
-## Ou acesse o projeto 'vivo' (foi deito o deploy)
+## Ou acesse o projeto 'vivo' (foi feito o deploy)
 
 Realizei o deploy com o Heroku e o projeto está 'vivo' na URL: 
 
