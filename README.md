@@ -29,8 +29,8 @@ Instale as dependências
   npm install
 ```
 
-**! Antes de rodar certifique-se que está rodando um servidor MySQL local 
-e que tem configurou as variáveis de ambiente informadas na próxima seção. !**
+**!! Antes de rodar certifique-se que está rodando um servidor MySQL local 
+e que configurou as variáveis de ambiente informadas na próxima seção !!**
 
 
 Inicie o servidor
