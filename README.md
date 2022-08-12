@@ -68,7 +68,7 @@ copiar este aquivo, renomeá-lo para .env e completar as variáveis
 
 Realizei o deploy com o Heroku e o projeto está 'vivo' na URL: 
 
-https://api-helper-ghibli-movies.herokuapp.com/.
+https://api-helper-ghibli-movies.herokuapp.com/
 
 Para rápida demonstração, aqui está a URL do app frontend que consome este backend: 
 
