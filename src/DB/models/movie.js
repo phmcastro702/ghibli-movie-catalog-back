@@ -4,6 +4,7 @@ import { DB_Connection } from '../connection.js';
 
 class Movie extends Model { };
 
+// Modelando nossos dados para a tabela de filmes
 Movie.init({
     id: {
         type: DataTypes.INTEGER,
@@ -11,6 +12,12 @@ Movie.init({
         autoIncrement: true,
         allowNull: false
     },
+    /*
+        Posteriormente se precisarmos de uma página 
+        para mostrar todos os detalhes de cada filme
+        podemos usar esse ID único para acessar o filme
+        diretamente na API.
+    */
     movie_id: {
         type: DataTypes.STRING,
         allowNull: false
@@ -20,6 +27,7 @@ Movie.init({
     },
     banner: {
         type: DataTypes.STRING,
+        // Validação do sequelize para formato de URL
         validate: {
             isUrl: true
         }
@@ -35,12 +43,14 @@ Movie.init({
     },
     createdAt: {
         type: DataTypes.STRING,
+        // Formatando data para formato SQL com hora local.
         defaultValue: new Date()
             .toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
             .replace(/\//gm, '-')
     },
     updatedAt: {
         type: DataTypes.STRING,
+        // Formatando data para formato SQL com hora local. 
         defaultValue: new Date()
             .toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
             .replace(/\//gm, '-')
@@ -51,6 +61,5 @@ Movie.init({
     timestamps: false,
 });
 
-// 10-08/2022 20:49:53
 
 export { Movie };
